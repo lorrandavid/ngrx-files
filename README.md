@@ -1,6 +1,6 @@
 # VS Code NgRx Files
 
-This extension for VS Code allows **quickly scaffold NgRx state files** in your project.
+This extension for VS Code allows **quickly scaffold NgRx state files** in your Angular 5+ project.
 
 # How to install
 
