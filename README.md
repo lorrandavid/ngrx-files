@@ -1,0 +1,26 @@
+# VS Code Angular Files
+
+This extension allows **quickly scaffold NgRx state files** in your project.
+
+# How to install
+
+1. Go to the "Extensions" tab on your sidebar
+2. Click on the 3 dots "..." on the top right corner
+3. Click on "Install from VSIX"
+4. Select the downloaded file
+
+# How to use
+
+1. Right click a fold and select "Scaffold NgRx State Files"
+2. Type a name that will be used as a key for the state and press "Enter"
+
+# Disclaimer
+
+**Important:** This extension due to the nature of it's purpose will create
+files on your hard drive and if necessary create the respective folder structure.
+While it should not override any files during this process, I'm not giving any guarantees
+or take any responsibility in case of lost data. 
+
+# License
+
+MIT

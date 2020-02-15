@@ -1,0 +1,24 @@
+import { Action } from '@ngrx/store';
+
+export enum {{ pascalTitle }}ActionsTypes {
+    LISTAR_{{ upperTitle }} = '[{{ pascalTitle }}] Listar',
+    LISTAR_{{ upperTitle }}_SUCESSO = '[{{ pascalTitle }}] Listar sucesso',
+    LISTAR_{{ upperTitle }}_ERRO = '[{{ pascalTitle }}] Listar erro'
+}
+
+export class Listar{{ pascalTitle }} implements Action {
+    readonly type = {{ pascalTitle }}ActionsTypes.LISTAR_{{ upperTitle }};
+    constructor() { }
+}
+
+export class Listar{{ pascalTitle }}Sucesso implements Action {
+    readonly type = {{ pascalTitle }}ActionsTypes.LISTAR_{{ upperTitle }}_SUCESSO;
+    constructor(public payload: any) { }
+}
+
+export class Listar{{ pascalTitle }}Erro implements Action {
+    readonly type = {{ pascalTitle }}ActionsTypes.LISTAR_{{ upperTitle }}_ERRO;
+    constructor(public payload: any) { }
+}
+
+export type {{ pascalTitle }}Actions = Listar{{ pascalTitle }} | Listar{{ pascalTitle }}Sucesso | Listar{{ pascalTitle }}Erro;

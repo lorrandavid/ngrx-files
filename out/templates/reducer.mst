@@ -1,0 +1,26 @@
+import { {{ pascalTitle }}Actions, {{ pascalTitle }}ActionsTypes } from './{{ lowerTitle }}.actions';
+
+export interface {{ pascalTitle }} {
+    id: string | null;
+}
+
+export interface {{ pascalTitle }}State {
+    {{ lowerTitle }}: {{ pascalTitle }}[];
+}
+
+export const initialState = {
+    {{ lowerTitle }}: []
+};
+
+export function {{ lowerTitle }}Reducer(state = initialState, action: {{ pascalTitle }}Actions): {{ pascalTitle }}State {
+  switch (action.type) {
+    case {{ pascalTitle }}ActionsTypes.LISTAR_{{ upperTitle }}_SUCESSO: {
+      return {
+        ...state
+      };
+    }
+
+    default:
+      return state;
+  }
+}

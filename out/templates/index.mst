@@ -1,0 +1,6 @@
+import * as actions from './{{ lowerTitle }}.actions';
+import * as reducer from './{{ lowerTitle }}.reducer';
+import * as selectors from './{{ lowerTitle }}.selectors';
+import { {{ pascalTitle }}Effects as effects } from './{{ lowerTitle }}.effects';
+
+export { actions, reducer, selectors, effects };

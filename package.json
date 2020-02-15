@@ -1,0 +1,76 @@
+{
+	"name": "ngrx-files",
+	"displayName": "NgRx Files",
+	"description": "Scaffold NgRx files",
+	"version": "0.0.1",
+    "publisher": "lorrandavid",
+	"engines": {
+		"vscode": "^1.42.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"author": {
+		"name": "Lorran David",
+		"email": "lorrantd1@gmail.com"
+	},
+	"keywords": [
+		"Angular 7",
+		"angular-cli",
+		"angular",
+		"TypeScript",
+		"Templates",
+		"NgRx",
+		"NgRx 7"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.scaffoldNgrxFiles",
+				"title": "Scaffold NgRx State Files"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "extension.scaffoldNgrxFiles",
+					"when": "explorerResourceIsFolder",
+					"group": "NgRx"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"templates": "copyfiles -u 1 src/templates/**/*.mst ./out",
+		"vscode:prepublish": "npm run templates && npm run compile",
+		"compile": "npm run templates && tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"@types/mustache": "^4.0.0",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.1",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.42.0",
+		"@typescript-eslint/eslint-plugin": "^2.18.0",
+		"@typescript-eslint/parser": "^2.18.0",
+		"copyfiles": "^2.2.0",
+		"eslint": "^6.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.0.1",
+		"typescript": "^3.7.5",
+		"vscode-test": "^1.3.0"
+	},
+	"dependencies": {
+		"mustache": "^4.0.0",
+		"slugify": "^1.3.6"
+	}
+}
