@@ -11,7 +11,7 @@ This extension for VS Code allows **quickly scaffold NgRx state files** in your 
 
 # How to use
 
-1. Right click a fold and select "Scaffold NgRx State Files"
+1. Right click on a folder and select "Scaffold NgRx State Files"
 2. Type a name that will be used as a key for the state and press "Enter"
 
 # Disclaimer
