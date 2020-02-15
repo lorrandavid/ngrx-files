@@ -1,10 +1,10 @@
-# VS Code Angular Files
+# VS Code NgRx Files
 
-This extension allows **quickly scaffold NgRx state files** in your project.
+This extension for VS Code allows **quickly scaffold NgRx state files** in your project.
 
 # How to install
 
-1. Go to the "Extensions" tab on your sidebar
+1. Go to "Extensions" tab on your VS Code sidebar
 2. Click on the 3 dots "..." on the top right corner
 3. Click on "Install from VSIX"
 4. Select the downloaded file
