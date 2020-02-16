@@ -4,10 +4,11 @@ This extension for VS Code allows **quickly scaffold NgRx state files** in your 
 
 # How to install
 
-1. Go to "Extensions" tab on your VS Code sidebar
-2. Click on the 3 dots "..." on the top right corner
-3. Click on "Install from VSIX"
-4. Select the downloaded file
+1. Download the extension [here](https://github.com/lorrandavid/ngrx-files/releases/download/v0.0.3/ngrx-files-0.0.3.vsix)
+2. Go to "Extensions" tab on your VS Code sidebar
+3. Click on the 3 dots "..." on the top right corner
+4. Click on "Install from VSIX"
+5. Select the downloaded file
 
 # How to use
 
