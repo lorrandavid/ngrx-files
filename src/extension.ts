@@ -30,7 +30,7 @@ async function run(key: string, fsPath: string) {
 	const files = updateFilesNameTemplate(key);
 
 	await generateDirectory(key, fsPath);
-	await generateFiles(key, fsPath, files);
+	generateFiles(key, fsPath, files);
 }
 
 /**
@@ -39,9 +39,11 @@ async function run(key: string, fsPath: string) {
  */
 function updateFilesNameTemplate(key: string) {
 	return Files.map(file => {
+		const variables = { pascalTitle: utils.pascalfy(key), upperTitle: utils.upperfy(key), lowerTitle: key };
+
 		return Object.assign({}, file, {
 			name: file.name.replace(UtilEnum.PLACEHOLDER, key),
-			content: Mustache.render(getTemplate(file.type), { pascalTitle: utils.pascalfy(key), upperTitle: utils.upperfy(key), lowerTitle: key })
+			content: Mustache.render(getTemplate(file.type), variables)
 		});
 	});
 }
@@ -65,7 +67,7 @@ function getTemplate(type: string) {
 function generateDirectory(key: string, fsPath: string) {
 	const desiredPath = path.join(path.normalize(fsPath), key);
 
-	fs.mkdir(desiredPath, {}, (err) => {
+	return fs.mkdir(desiredPath, {}, (err) => {
 		if (err) {
 			vscode.window.showErrorMessage('File(s) could not be created. State already exists in the current directory.');
 			throw err;
