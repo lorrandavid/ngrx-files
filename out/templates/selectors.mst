@@ -1,9 +1,0 @@
-import { createSelector } from '@ngrx/store';
-import { AppState } from '..';
-
-export const select{{ pascalTitle }} = (state: AppState) => state.{{ lowerTitle }};
-
-export const select{{ pascalTitle }}Prop = createSelector(
-    select{{ pascalTitle }},
-    state => state.{{ lowerTitle }}
-);
