@@ -2,7 +2,7 @@
 	"name": "ngrx-files",
 	"displayName": "NgRx Files",
 	"description": "Scaffold NgRx files",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"publisher": "lorrandavid",
 	"engines": {
 		"vscode": "^1.42.0"

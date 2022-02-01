@@ -39,7 +39,7 @@ async function run(key: string, fsPath: string) {
  */
 function updateFilesNameTemplate(key: string) {
 	return Files.map(file => {
-		const variables = { pascalTitle: utils.pascalfy(key), upperTitle: utils.upperfy(key), lowerTitle: key };
+		const variables = { pascalTitle: utils.pascalfy(key), upperTitle: utils.upperfy(key), lowerTitle: utils.camelfy(key) };
 
 		return Object.assign({}, file, {
 			name: file.name.replace(UtilEnum.PLACEHOLDER, key),

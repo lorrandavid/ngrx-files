@@ -46,7 +46,7 @@ function run(key, fsPath) {
  */
 function updateFilesNameTemplate(key) {
     return files_1.Files.map(file => {
-        const variables = { pascalTitle: utils.pascalfy(key), upperTitle: utils.upperfy(key), lowerTitle: key };
+        const variables = { pascalTitle: utils.pascalfy(key), upperTitle: utils.upperfy(key), lowerTitle: utils.camelfy(key) };
         return Object.assign({}, file, {
             name: file.name.replace(util_1.UtilEnum.PLACEHOLDER, key),
             content: Mustache.render(getTemplate(file.type), variables)
